@@ -1,0 +1,194 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat&display=swap');
+
+/* HEADER */
+#container-header-site {
+   height: 500px;
+   padding: 0 2%;
+   background: url(../img/header-bg.jpg) no-repeat center;
+   background-size: cover;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+}
+
+#header-site {
+   display: flex;
+   flex-direction: column;
+}
+
+#header-site a {
+   text-decoration: none;
+}
+
+#nav-site {
+   height: 50px;
+   background: #212529;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#title-site {
+   color: #f9cc35;
+   font-size: 1.5em;
+   font-family: 'Kaushan Script', cursive;
+}
+
+#menu-site, #menu-site-ham, #welcome-message-ntmy, #more-info-btn {
+   font-family: 'Montserrat', sans-serif;
+}
+
+#menu-site-ham, #more-info-btn {
+   background: #fed136;
+   color: #fff;
+   border: 1px solid #000;
+   border-radius: 7px;
+}
+
+#menu-site-ham {
+   padding: .6em;
+}
+
+#menu-site-ham:hover {
+   cursor: pointer;
+}
+
+#container-welcome-message {
+   height: 100%;
+   text-align: center;
+   box-sizing: border-box;
+   padding-top: 30%;
+}
+
+#container-welcome-message p {
+   margin-bottom: 20px;
+}
+
+#welcome-message-wc {
+   font-size: 1.3em;
+   font-family: 'Times New Roman', Times, serif, sans-serif;
+   font-weight: bold;
+   font-style: italic; 
+}
+
+#welcome-message-ntmy {
+   font-size: 2.5em;
+   font-weight: 800;
+}
+
+#more-info-btn {
+   padding: 1em 1.75em;
+   font-size: 1.25em;
+   font-weight: bold;
+}
+
+/* SITE HAMBURGER MENU FUNCTIONALITY */
+
+.drop-down-default, .drop-down-menu-open, .drop-down-menu-closed {
+   width: 100px;
+   height: 50vh;
+   top: 0px;
+   background: blue;
+   position: absolute;
+   top: 40px;
+   z-index: -1;
+}
+
+.drop-down-default {
+    display: none;
+}
+
+.drop-down-menu-open {
+    animation: openMenu .5s forwards linear;
+    z-index: 1;
+}
+
+.drop-down-menu-closed {
+    animation: closeMenu .5s forwards linear;
+    display: none;
+    z-index: 2;
+}
+
+@keyframes closeMenu {
+    from {
+        height: 100px;
+    }
+    to {
+        height: 0vh;
+    }
+}
+
+@keyframes openMenu {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 100px;
+    }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 600px) {
+   #header-site {
+      width: 550px;
+   }
+   #container-welcome-message {
+      padding-top: 25%;
+   }
+}
+
+@media only screen and (min-width: 765px) {
+   #container-header-site {
+      height: 830px;
+   }
+   #header-site {
+      width: 720px;
+   }
+   #container-welcome-message {
+      padding-top: 35%;
+   }
+   #welcome-message-wc {
+      font-size: 2.5em;
+   }
+   #welcome-message-ntmy {
+      font-size: 4em;
+      font-weight: 800;
+   }
+   #more-info-btn {
+      margin-top: 30px;
+   }
+}
+
+@media only screen and (min-width: 990px) {
+   /* HEADER */
+   #container-header-site {
+      height: 750px;
+   }
+   #header-site {
+      width: 930px;
+   }
+   #title-site {
+      font-size: 2em;
+   }
+   #nav-site {
+      background: transparent;
+      height: 100px;
+   }
+   #menu-site-ham {
+      display: none;
+   }
+   #menu-site {
+      background: transparent;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      position: relative;
+      top: 0px;
+   }
+   #menu-site li {
+      margin-left: 30px;
+   }
+   #container-welcome-message {
+      padding-top: 22%;
+   }
+}
